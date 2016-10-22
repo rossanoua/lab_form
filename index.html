@@ -5,10 +5,47 @@
     <title>Lab Form</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/jquery.maskedinput.js"></script>
 </head>
 <body>
-<form action="">
-    
-</form>
+
+<div class="wrapper">
+    <div class="head">
+        <h1>Заполните анкету</h1>
+        <p><sup>*</sup> - Поля обязательные для заполнения</p>
+    </div>
+    <form action="post.php" method="post">
+
+        <div class="input">
+            <label for="name">Ваши Имя и фамилия:</label><input id="name" name="name" type="text" placeholder="Иванов Иван Иванович" pattern="([А-я]+|[A-z]+)\s([А-я]+|[A-z]+)" required autofocus>
+        </div>
+        <div class="input">
+            <label for="nickname">Введите логин для сайта (на английском):</label><input id="nickname" name="nickname" type="text" placeholder="Ivan" required>
+        </div>
+        <div class="input">
+            <label for="sex">Кто Вы:</label><span>Ж</span><input type="radio" value="1" name="sex" required><span>М</span><input id="sex" type="radio" value="2" name="sex" required>
+        </div>
+        <div class="input">
+            <label for="date">Введите дату рождения:</label><input type="date" id="date">
+        </div>
+        <div class="input">
+            <label for="email">Email:</label><input id="email" type="email" placeholder="Ваш почтовый ящик" required>
+        </div>
+        <div class="input">
+            <label for="web">Website (url):</label><input id="web" type="url" placeholder="http://www.my-site.com" required>
+        </div>
+        <div class="input">
+            <label for="card">Кредитная карта:</label><input id="card" type="number" required>
+        </div>
+        <div class="input">
+            <label for="tel">Телефон:</label><input id="tel" type="number" required>
+        </div>
+        <div class="input">
+            <label for="message">Сообщение:</label><input id="message" type="textarea" placeholder="Введите свое собщение...">
+        </div>
+        <input type="submit" value="Отправить">
+    </form>
+</div>
 </body>
 </html>

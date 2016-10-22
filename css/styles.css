@@ -1,0 +1,62 @@
+body{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content:center;
+    align-items:center;
+}
+
+.wrapper {
+    top:15px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items:center;
+    justify-content:center;
+    background-color: #dbd9d9;
+    width: 880px;
+    height:auto;
+    border-radius: 7px;
+    margin: 10px 0 0 0;
+    padding: 0;
+    border: 1px solid deepskyblue;
+}
+
+.head {
+    width:90%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+}
+
+div{
+    margin:5px;
+    padding:0;
+    border-bottom: 2px solid deepskyblue;
+}
+
+form{
+    width:90%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content:space-between;
+    align-items:stretch;
+}
+
+form div{
+    display: flex;
+    flex-flow: row nowrap;
+    width:100%;
+}
+
+form div label{
+    width:250px;
+}
+
+input:focus:valid{
+    background: #fff url("../img/yes.png") no-repeat 98% center;
+}
+
+input:focus:invalid{
+    background: #fff url("../img/no.png") no-repeat 98% center;
+}
