@@ -12,7 +12,6 @@
             $("#dateNOT").mask("99/99/9999");
             $("#tel").mask("+38(099) 999 99 99");
             $("#card").mask("9999 9999 9999 9999");
-            $("#ssn").mask("999-99-9999");
         });
 
     </script>
@@ -24,7 +23,7 @@
         <h1>Заполните анкету</h1>
         <p><sup>*</sup> - Поля обязательные для заполнения</p>
     </div>
-    <form action="http://remont-compa.noip.me/lab-form/data.php" method="post">
+    <form action="http://remont-compa.noip.me/lab_form/data.php" method="post">
 
         <div class="input">
             <label for="name">Ваши имя и фамилия:</label>
@@ -44,32 +43,32 @@
         </div>
         <div class="input">
             <label for="date">Введите дату рождения:</label>
-            <input type="date" id="date" pattern="([0-9]|[0][1-9]|[1][1-9]|[2][1-9]|[3][1])(\.|\/|\-)([1-9]|[0][1-9]|[1][0,1,2])(\.|\/|\-)([1][9][3-9][0-9]|[2][0][0,1][0-6])">
+            <input type="date" name="date" id="date" pattern="([0-9]|[0][1-9]|[1][1-9]|[2][1-9]|[3][1])(\.|\/|\-)([1-9]|[0][1-9]|[1][0,1,2])(\.|\/|\-)([1][9][3-9][0-9]|[2][0][0,1][0-6])">
             <span class="input_hint">Дата вашего рождения</span>
         </div>
         <div class="input">
             <label for="email">Email:</label>
-            <input id="email" type="email" placeholder="Ваш почтовый ящик" required>
+            <input id="email" name="email" type="email" placeholder="Ваш почтовый ящик" required>
             <span class="input_hint">Адрес Вашей электронной почты. (Не рекомендуем использовать адреса на доменах mail.ru; такие как: mail.ru, inbox.ru, bk.ru, list.ru и др.)</span>
         </div>
         <div class="input">
             <label for="web">Website (url):</label>
-            <input id="web" type="text" placeholder="http://www.my-site.com" required pattern="(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9%_:?\+.~#&//=]*)">
+            <input id="web" name="site" type="text" placeholder="http://www.my-site.com" required pattern="(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9%_:?\+.~#&//=]*)">
             <span class="input_hint">Ваша станичка в интернет.</span>
         </div>
         <div class="input">
             <label for="card">Кредитная карта:</label>
-            <input id="card" type="text" pattern="([0-9][0-9][0-9][0-9])\s([0-9][0-9][0-9][0-9])\s([0-9][0-9][0-9][0-9])\s([0-9][0-9][0-9][0-9])" required>
+            <input id="card" name="card" type="text" pattern="([0-9][0-9][0-9][0-9])\s([0-9][0-9][0-9][0-9])\s([0-9][0-9][0-9][0-9])\s([0-9][0-9][0-9][0-9])" required>
             <span class="input_hint">Номер Вашей кредитной карты.</span>
         </div>
         <div class="input">
             <label for="tel">Телефон:</label>
-            <input id="tel" type="text" required pattern="^([+])([3][8])(\([0]\d{2}\))\s\d{3}\s\d{2}\s\d{2}$">
+            <input id="tel" name="phone" type="text" required pattern="^([+])([3][8])(\([0]\d{2}\))\s\d{3}\s\d{2}\s\d{2}$">
             <span class="input_hint">Ваш номер мобильного телефона.</span>
         </div>
         <div class="input">
             <label for="message">Сообщение:</label>
-            <textarea id="message" cols="62" rows="6" placeholder="Введите свое собщение..."></textarea>
+            <textarea id="message" name="message" cols="62" rows="6" placeholder="Введите свое собщение..."></textarea>
             <!--<span class="input_hint">Черкните несколько слов о себе.</span>-->
         </div>
 
