@@ -21,18 +21,28 @@ body{
 }
 
 .head {
-    width:90%;
+    width: 90%;
+    height: 80px;
     display: flex;
     flex-flow: row nowrap;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    font-size: 15px;
 }
 
-div{
-    margin:5px;
-    padding:0;
-    border-bottom: 2px solid deepskyblue;
+.head h1 {
+    margin: 32px 0 0 13px;
+    font-size: 23px;
+    font-weight: normal;
+}
+
+.head p {
+    color: #D8524F;
+    font-size: 15px;
+    margin: 22px 120px 0 0;
+}
+
+.head, form div{
+    border-bottom: 1px solid deepskyblue;
 }
 
 form{
@@ -43,14 +53,25 @@ form{
     align-items:stretch;
 }
 
-form div{
+form div {
+    height: 66px;
     display: flex;
     flex-flow: row nowrap;
-    width:100%;
+    justify-content: flex-start;
+    width: 100%;
+    align-items: center;
 }
 
-form div label{
-    width:250px;
+form div label {
+    width: 165px;
+    margin: 0 0 0 13px;
+    font-size: 13px;
+}
+
+form div input {
+    width: 280px;
+    height: 31px;
+    margin: 16px 0 0 0;
 }
 
 input:focus:valid{
@@ -59,4 +80,8 @@ input:focus:valid{
 
 input:focus:invalid{
     background: #fff url("../img/no.png") no-repeat 98% center;
+}
+
+textarea{
+    resize: none;
 }
