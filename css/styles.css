@@ -162,13 +162,13 @@ form div:last-child input:focus{
 }
 
 .input_hint:before {
-    display: block;
+    display: inherit;
     content: "\25C0";
     margin: 0 0 0 -15px;
     color: crimson;
     font-size: 27px;
-    width: 21px;
-    height: 11px;
+    width: 15px;
+    height: 0;
 }
 
 form div input:focus + .input_hint{
@@ -176,11 +176,11 @@ form div input:focus + .input_hint{
 }
 
 form div input:valid + .input_hint{
-    background-color: white;
+    background-color: #58B338;
 }
 
 form div input:valid + .input_hint:before{
-    color: white;
+    color: #58B338;
 }
 
 input:focus:valid{
