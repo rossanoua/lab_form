@@ -7,6 +7,15 @@
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/jquery-1.8.3.min.js"></script>
     <script src="js/jquery.maskedinput.js"></script>
+    <script>
+        jQuery(function($){
+            $("#date").mask("99/99/9999");
+            $("#tel").mask("+38(099) 999 99 99");
+            $("#card").mask("9999 9999 9999 9999");
+            $("#ssn").mask("999-99-9999");
+        });
+
+    </script>
 </head>
 <body>
 
@@ -18,33 +27,55 @@
     <form action="post.php" method="post">
 
         <div class="input">
-            <label for="name">Ваши Имя и фамилия:</label><input id="name" name="name" type="text" placeholder="Иванов Иван Иванович" pattern="([А-я]+|[A-z]+)\s([А-я]+|[A-z]+)" required autofocus>
+            <label for="name">Ваши имя и фамилия:</label>
+            <input id="name" name="name" type="text" placeholder="Иванов Иван" pattern="([А-я]+|[A-z]+)\s([А-я]+|[A-z]+)" required autofocus>
+            <span class="input_hint">Введите, пожалуйста, в это поле Ваши имя и фамилию.</span>
         </div>
         <div class="input">
-            <label for="nickname">Введите логин для сайта (на английском):</label><input id="nickname" name="nickname" type="text" placeholder="Ivan" required>
+            <label for="nickname">Введите логин для сайта (на английском):</label>
+            <input id="nickname" name="nickname" type="text" placeholder="IvAN" required pattern="^([A-Z]{3,20}|[a-z]{3,20}|[A-z]{3,20})$">
+            <span class="input_hint">Ваш логин. (латиницей от 3 до 20 символов)</span>
         </div>
         <div class="input">
-            <label for="sex">Кто Вы:</label><span>Ж</span><input type="radio" value="1" name="sex" required><span>М</span><input id="sex" type="radio" value="2" name="sex" required>
+            <label for="sex">Кто Вы:</label>
+            <input id="sex" type="radio" value="2" name="sex" required><span>М</span>
+            <input type="radio" value="1" name="sex" required><span>Ж</span>
+            <!--<span class="input_hint">Ваш пол.</span>-->
         </div>
         <div class="input">
-            <label for="date">Введите дату рождения:</label><input type="date" id="date">
+            <label for="date">Введите дату рождения:</label>
+            <input type="date" id="date" pattern="">
+            <span class="input_hint">Дата вашего рождения</span>
         </div>
         <div class="input">
-            <label for="email">Email:</label><input id="email" type="email" placeholder="Ваш почтовый ящик" required>
+            <label for="email">Email:</label>
+            <input id="email" type="email" placeholder="Ваш почтовый ящик" required>
+            <span class="input_hint">Адрес Вашей электронной почты. (Не рекомендуем использовать адреса на доменах mail.ru; такие как: mail.ru, inbox.ru, bk.ru, list.ru и др.)</span>
         </div>
         <div class="input">
-            <label for="web">Website (url):</label><input id="web" type="url" placeholder="http://www.my-site.com" required>
+            <label for="web">Website (url):</label>
+            <input id="web" type="text" placeholder="http://www.my-site.com" required pattern="(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9%_:?\+.~#&//=]*)">
+            <span class="input_hint">Ваша станичка в интернет.</span>
         </div>
         <div class="input">
-            <label for="card">Кредитная карта:</label><input id="card" type="number" required>
+            <label for="card">Кредитная карта:</label>
+            <input id="card" type="text" pattern="([0-9][0-9][0-9][0-9])\s([0-9][0-9][0-9][0-9])\s([0-9][0-9][0-9][0-9])\s([0-9][0-9][0-9][0-9])" required>
+            <span class="input_hint">Номер Вашей кредитной карты.</span>
         </div>
         <div class="input">
-            <label for="tel">Телефон:</label><input id="tel" type="number" required>
+            <label for="tel">Телефон:</label>
+            <input id="tel" type="text" required pattern="^([+])([3][8])(\([0]\d{2}\))\s\d{3}\s\d{2}\s\d{2}$">
+            <span class="input_hint">Ваш номер мобильного телефона.</span>
         </div>
         <div class="input">
-            <label for="message">Сообщение:</label><textarea id="message" cols="40" rows="5" placeholder="Введите свое собщение..."></textarea>
+            <label for="message">Сообщение:</label>
+            <textarea id="message" cols="40" rows="5" placeholder="Введите свое собщение..."></textarea>
+            <span class="input_hint">Черкните несколько слов о себе.</span>
         </div>
-        <input type="submit" value="Отправить">
+
+        <div class="input">
+            <input type="submit" value="Отправить">
+        </div>
     </form>
 </div>
 </body>
