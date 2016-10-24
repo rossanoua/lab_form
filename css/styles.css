@@ -172,7 +172,7 @@ form div:last-child input:focus{
     flex-flow: row nowrap;
     justify-content: flex-start;
     align-items: center;
-    visibility: visible;
+    visibility: hidden;
     width: 290px;
     font-size: 12px;
     background-color: crimson;
