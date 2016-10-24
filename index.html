@@ -27,7 +27,7 @@
         <div>
             <label for="name">Ваши имя и фамилия:</label>
             <input id="name" name="name" type="text" placeholder="Иван Иванов" pattern="([А-я]+|[A-z]+)\s([А-я]+|[A-z]+)" required autofocus>
-            <span class="input_hint">Введите, пожалуйста, в это поле Ваши имя и фамилию.</span>
+            <span class="input_hint">Ваши имя и фамилия.</span>
         </div>
         <div>
             <label for="nickname">Введите логин для сайта (на английском):</label>
@@ -35,7 +35,7 @@
             <span class="input_hint">Ваш логин. (латиницей от 3 до 20 символов)</span>
         </div>
         <div>
-            <label for="sex">Кто Вы:</label>
+            <label for="sex">Кто Вы?</label>
             <input id="sex" type="radio" value="2" name="sex" required><span>М</span>
             <input type="radio" value="1" name="sex" required><span>Ж</span>
             <!--<span class="input_hint">Ваш пол.</span>-->
@@ -48,7 +48,7 @@
         <div>
             <label for="email">Email:</label>
             <input id="email" name="email" type="email" placeholder="Ваш почтовый ящик" required>
-            <span class="input_hint">Адрес Вашей электронной почты. (Не рекомендуем использовать адреса на доменах mail.ru; такие как: mail.ru, inbox.ru, bk.ru, list.ru и др.)</span>
+            <span class="input_hint">Адрес Вашей электронной почты.</span>
         </div>
         <div>
             <label for="web">Website (url):</label>
@@ -57,12 +57,12 @@
         </div>
         <div>
             <label for="card">Кредитная карта:</label>
-            <input id="card" name="card" type="text" pattern="([0-9][0-9][0-9][0-9])\s([0-9][0-9][0-9][0-9])\s([0-9][0-9][0-9][0-9])\s([0-9][0-9][0-9][0-9])" required>
+            <input id="card" name="card" type="text" placeholder="1234 1234 1234 1234" pattern="([0-9][0-9][0-9][0-9])\s([0-9][0-9][0-9][0-9])\s([0-9][0-9][0-9][0-9])\s([0-9][0-9][0-9][0-9])" required>
             <span class="input_hint">Номер Вашей кредитной карты.</span>
         </div>
         <div>
             <label for="tel">Телефон:</label>
-            <input id="tel" name="phone" type="text" required pattern="^([+])([3][8])(\([0]\d{2}\))\s\d{3}\s\d{2}\s\d{2}$">
+            <input id="tel" name="phone" type="text" placeholder="+38(099) 999 88 77" required pattern="^([+])([3][8])(\([0]\d{2}\))\s\d{3}\s\d{2}\s\d{2}$">
             <span class="input_hint">Ваш номер мобильного телефона.</span>
         </div>
         <div>

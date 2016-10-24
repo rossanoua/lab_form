@@ -46,58 +46,64 @@ body{
 }
 
 form{
-    width:90%;
     display: flex;
-    flex-flow: column nowrap;
-    justify-content:space-between;
-    align-items:stretch;
+    flex-flow: row wrap;
+    justify-content:center;
+    align-items:center;
+    box-sizing: border-box;
 }
 
-form div {
-    height: 66px;
+form>div {
     display: flex;
     flex-flow: row nowrap;
-    justify-content: flex-start;
-    width: 100%;
     align-items: center;
+    box-sizing: border-box;
+    height: 69px;
+    flex: 1 1 500px;
+    margin: 0 57px;
 }
 
-form div label {
-    width: 165px;
-    margin: 0 0 0 13px;
+form>div>label {
+    width: 160px;
+    margin: 0 5px 0 0;
     font-size: 13px;
 }
 
-form div input {
+form>div>label+input {
     width: 280px;
+    height: 35px;
+    font-size: 20px;
     box-sizing: border-box;
-    height: 31px;
-    margin: 16px 0 0 0;
     transition: width 1s;
     border: 1px solid #AAAAAA;
     border-radius: 2px;
     box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.25);
 }
 
-form div input:focus {
+form>div>label+input+.input_hint {
+    width: 250px;
+}
+
+form>div>input:focus{
     width: 310px;
     border: 2px solid rgb(88, 179, 56);
     outline-offset: 0;
 }
 
-form div input:required{
-    background: #fff url("../img/required.png") no-repeat 98% center;
-    box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.25);
+form>div>input:required{
+background: #fff url("../img/required.png") no-repeat 98% center;
+box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.25);
 }
 
-form div:nth-child(3) input {
+form>div:nth-child(3) input[type="radio"] {
     width: 23px;
+    height: 23px;
     margin: 10px;
     border: none;
     box-shadow: none;
 }
 
-form div:nth-child(3) span{
+form>div:nth-child(3) span{
     font-weight:bold;
     font-size:22px;
     margin: 0 10px 0 0;
@@ -109,18 +115,28 @@ form div:nth-child(3) span:after {
     margin: 0 0 0 5px;
 }
 
-form div:nth-child(4) input:focus{
-    width:280px;
+form div:nth-child(3) span[class="input_hint"]{
+    font-size: 12px;
+    font-weight:normal;
 }
 
-form div:nth-child(9){
-    margin:10px 0;
-    height:auto;
+form div:nth-child(3) span[class="input_hint"]:after{
+    content: '';
+}
+
+form>div:nth-child(9) {
+    margin: 10px 58px;
+    height: auto;
 }
 
 form div:nth-child(9) textarea{
     margin-bottom:10px;
 }
+
+form>div:nth-child(9) textarea:focus{
+    border: 2px solid rgb(88, 179, 56);
+}
+
 
 form div:last-child input {
     width: 90px;
@@ -140,7 +156,7 @@ form div:last-child input {
 form div:last-child {
     justify-content: center;
     align-items: center;
-    margin: 0 0 51px 0;
+    margin: 0 55px 51px;
 }
 
 form div:last-child input:focus{
@@ -152,23 +168,25 @@ form div:last-child input:focus{
 }
 
 .input_hint {
-    visibility: hidden;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    visibility: visible;
     width: 290px;
     font-size: 12px;
     background-color: crimson;
     border-radius: 5px;
-    margin: 11px 0 0 9px;
-    padding: 3px;
+    margin: 0 0 0 9px;
+    padding: 0;
 }
 
 .input_hint:before {
-    display: block;
+    display: flex;
     content: "\25C0";
-    margin: 0 0 0 -15px;
+    margin: 0 0 0 -8px;
     color: crimson;
-    font-size: 27px;
-    width: 21px;
-    height: 11px;
+    font-size: 18px;
 }
 
 form div input:focus + .input_hint{
@@ -176,11 +194,11 @@ form div input:focus + .input_hint{
 }
 
 form div input:valid + .input_hint{
-    background-color: white;
+    background-color: #58B338;
 }
 
 form div input:valid + .input_hint:before{
-    color: white;
+    color: #58B338;
 }
 
 input:focus:valid{
@@ -191,12 +209,20 @@ input:focus:invalid{
     background: #fff url("../img/no.png") no-repeat 98% center;
 }
 
-form div:nth-child(9) span{
-    width: 100px;
-}
+/*form div:nth-child(9) span{*/
+/*width: 100px;*/
+/*}*/
 
 textarea{
+    margin:0;
+    padding:4px;
     border-radius: 2px;
     font-size:14px;
     resize: none;
+}
+
+textarea:focus{
+    margin:-2px;
+    border: 2px solid rgb(88, 179, 56);
+    border-radius: 2px;
 }
